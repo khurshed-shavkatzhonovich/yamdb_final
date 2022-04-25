@@ -1,12 +1,12 @@
 import datetime as dt
+
+from categories.models import Categories, Genres, Title
 from django.conf import settings
-from django.db.models import Avg
 from django.contrib.auth import get_user_model
+from django.db.models import Avg
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 from reviews.models import Comment, Review
-from categories.models import Categories, Genres, Title
-
 
 User = get_user_model()
 
