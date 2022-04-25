@@ -82,6 +82,7 @@ class UserViewSet(viewsets.ModelViewSet):
             serializer.is_valid(raise_exception=True)
             serializer.save(role=request.user.role)
             return Response(serializer.data, status=status.HTTP_200_OK)
+        return None
 
 
 @api_view([HTTPMethod.POST],)
