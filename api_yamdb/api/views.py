@@ -1,7 +1,6 @@
 from api.filters import TitleFilter
-from api.permissions import (IsAdminOrReadOnlyPermission,
-                             IsAuthorOrReadOnlyOrAdminOrModerator,
-                             isAdminPermission)
+from api.permissions import (IsAdminOrReadOnlyPermission, IsAdminPermission,
+                             IsAuthorOrReadOnlyOrAdminOrModerator)
 from api.serializers import (CategorySerializer, CommentSerializer,
                              CreateTitleSerializer, GenreSerializer,
                              ReviewSerializer, SignUpSerializer,
@@ -61,7 +60,7 @@ def get_token(request):
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    permission_classes = (isAdminPermission,)
+    permission_classes = (IsAdminPermission,)
     filter_backends = (filters.SearchFilter,)
     search_fields = ('username', )
     lookup_field = 'username'
