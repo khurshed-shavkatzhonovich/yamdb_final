@@ -1,21 +1,18 @@
-name: Python package
+name: yamdb_workflow
 
 on: [push]
 
 jobs:
-  build:
-
+  tests:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python: ["3.7", "3.8", "3.9"]
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Setup Python
-        uses: actions/setup-python@v3
-        with:
-          python-version: ${{ matrix.python }}
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
