@@ -15,7 +15,7 @@ SECRET_KEY = env('SECRET_KEY', default='p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol
 
 DEBUG = False
 
-ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOSTS")
+ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOSTS").split(" ")
 
 
 INSTALLED_APPS = [
