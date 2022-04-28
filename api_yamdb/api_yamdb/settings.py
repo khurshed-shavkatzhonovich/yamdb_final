@@ -17,7 +17,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOSTS").split(" ")
 
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
