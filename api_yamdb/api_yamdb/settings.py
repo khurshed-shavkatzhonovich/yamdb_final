@@ -1,24 +1,21 @@
 import os
-import environ
 from datetime import timedelta
 
+import environ
 
-# import passwords
 env = environ.Env(
-    # set casting, default value
     DEBUG=(bool, False)
 )
-# reading .env file
-environ.Env.read_env()
-
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+environ.Env.read_env()
 
 SECRET_KEY = env('SECRET_KEY')
 
 DEBUG = False
 
-ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOSTS").split(" ")
+ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOSTS")
 
 
 INSTALLED_APPS = [

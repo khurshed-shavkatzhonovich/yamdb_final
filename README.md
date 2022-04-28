@@ -112,7 +112,7 @@ infra/.env.template
 
 ### Разработчик проекта
 
-* __Хуршед Бобоев__
+__Хуршед Бобоев__
 
   E-mail: [khurshed-shavkatzhonovich@yandex.ru](mailto:khurshed-shavkatzhonovich@yandex.ru)
 
@@ -120,4 +120,4 @@ infra/.env.template
   
 ### Развернутый и запущенный на сервере проект
 
-http://84.201.139.157/redoc/
+  http://84.201.139.157/redoc/
