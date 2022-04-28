@@ -1,5 +1,6 @@
 import os
 from datetime import timedelta
+
 from decouple import config
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -8,7 +9,17 @@ SECRET_KEY = config('SECRET_KEY', default='p&l%385148kslhtyn^##a1)ilz@4zqj=rq&ag
 
 DEBUG = False
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default=list(), cast=lambda v: [s.strip() for s in v.split(',')])
+
+def comma_split_line_to_list(value: str) -> list:
+    if not value:
+        return []
+    return value.split(',')
+
+
+ALLOWED_HOSTS = config(
+    'ALLOWED_HOSTS', default=list(),
+    cast=comma_split_line_to_list
+)
 
 INSTALLED_APPS = [
     'django.contrib.admin',
