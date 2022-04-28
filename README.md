@@ -113,6 +113,7 @@ infra/.env.template
 ### Разработчик проекта
 
 * __Хуршед Бобоев__
+
   E-mail: [khurshed-shavkatzhonovich@yandex.ru](mailto:khurshed-shavkatzhonovich@yandex.ru)
 
   Github: https://github.com/khurshed-shavkatzhonovich/
