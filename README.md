@@ -117,7 +117,9 @@ __Хуршед Бобоев__
   E-mail: [khurshed-shavkatzhonovich@yandex.ru](mailto:khurshed-shavkatzhonovich@yandex.ru)
 
   Github: https://github.com/khurshed-shavkatzhonovich/
-  
-### Развернутый и запущенный на сервере проект
+
+### Ссылки на развернутый и запущенный на сервере проект
+
+  http://84.201.139.157/admin/
 
   http://84.201.139.157/redoc/
